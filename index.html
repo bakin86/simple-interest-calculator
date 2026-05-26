@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Simple Interest Calculator</h1>
+        <form id="si-form" onsubmit="calculateSI(event)">
+            <div class="form-group">
+                <label for="principal">Principal Amount ($)</label>
+                <input type="number" id="principal" placeholder="Enter principal amount" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Rate of Interest (%)</label>
+                <input type="number" id="rate" placeholder="Enter interest rate" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="years">Time (Years)</label>
+                <input type="number" id="years" placeholder="Enter time in years" min="0" step="1" required>
+            </div>
+            <button type="submit">Compute Interest</button>
+        </form>
+
+        <div id="result" class="result hidden">
+            <p>If you deposit <span id="display-principal"></span>,</p>
+            <p>at an interest rate of <span id="display-rate"></span>%,</p>
+            <p>You will receive an amount of <span id="display-amount"></span>,</p>
+            <p>in the year <span id="display-year"></span>.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
